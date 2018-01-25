@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="consumable" max_length="40" name="x_58872_needit_consumable" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Consumable Type" mandatory="true" max_length="40" name="consumable_type" type="string">
+            <choice>
+                <element label="Admin Account" sequence="0" value="1"/>
+                <element label="Shared Account" sequence="1" value="2"/>
+                <element label="Service Account" sequence="2" value="3"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Business Case" max_length="80" name="u_business_case" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Display Name" max_length="40" name="u_display_name" type="string"/>
+        <element label="Requested For" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Subscription" max_length="40" name="u_subscription" type="string"/>
+        <index name="index">
+            <element name="u_requested_for"/>
+        </index>
+    </element>
+</database>
