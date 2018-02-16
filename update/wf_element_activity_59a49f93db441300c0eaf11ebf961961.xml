@@ -14,7 +14,7 @@
         <input_process_script/>
         <input_transform>{"source":"ec2-18-219-10-126.us-east-2.compute.amazonaws.com","script_type":"file","command":"","midScriptFile":"8823139edbc01300c0eaf11ebf961989","powershellVariables":"[{\"name\":\"Name\",\"type\":\"plain\",\"value\":\"Hugo\"}]","use_mid_service_account":"false","credential_tag":"AWS Access Credentials","midCapabilities":"427709a60a0006bc7d2904e99132532d"}</input_transform>
         <local_variables/>
-        <name>PowershellProbe</name>
+        <name>DO NOT USE</name>
         <output_meta/>
         <output_process_script/>
         <output_transform/>
@@ -24,40 +24,40 @@
         <style/>
         <sys_class_name>wf_element_activity</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-05 12:48:06</sys_created_on>
-        <sys_id>afa84396dbc01300c0eaf11ebf961905</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>PowershellProbe</sys_name>
+        <sys_created_on>2018-02-08 16:14:19</sys_created_on>
+        <sys_id>59a49f93db441300c0eaf11ebf961961</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>DO NOT USE</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
-        <sys_update_name>wf_element_activity_afa84396dbc01300c0eaf11ebf961905</sys_update_name>
+        <sys_update_name>wf_element_activity_59a49f93db441300c0eaf11ebf961961</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-08 16:15:02</sys_updated_on>
+        <sys_updated_on>2018-02-08 16:15:52</sys_updated_on>
         <version_container_id>e29e7652dbc01300c0eaf11ebf96190a</version_container_id>
     </wf_element_activity>
-    <sys_translated_text action="delete_multiple" query="documentkey=afa84396dbc01300c0eaf11ebf961905"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=59a49f93db441300c0eaf11ebf961961"/>
     <wf_versionable action="INSERT_OR_UPDATE">
         <checked_out/>
         <checked_out_by/>
         <published>false</published>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-05 12:48:06</sys_created_on>
-        <sys_id>a7a84396dbc01300c0eaf11ebf961906</sys_id>
+        <sys_created_on>2018-02-08 16:14:19</sys_created_on>
+        <sys_id>51a49f93db441300c0eaf11ebf961962</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-08 16:15:02</sys_updated_on>
-        <valid_from>2018-02-05 14:02:56</valid_from>
+        <sys_updated_on>2018-02-08 16:15:52</sys_updated_on>
+        <valid_from>2018-02-08 16:15:02</valid_from>
         <valid_to/>
-        <version>2</version>
+        <version>3</version>
         <version_container_id>e29e7652dbc01300c0eaf11ebf96190a</version_container_id>
-        <wf_element_definition display_value="PowershellProbe">afa84396dbc01300c0eaf11ebf961905</wf_element_definition>
+        <wf_element_definition display_value="DO NOT USE">59a49f93db441300c0eaf11ebf961961</wf_element_definition>
     </wf_versionable>
-    <wf_versionable action="update_multiple" query="version_container_id=e29e7652dbc01300c0eaf11ebf96190a^sys_id!=a7a84396dbc01300c0eaf11ebf961906^version&lt;2">
+    <wf_versionable action="update_multiple" query="version_container_id=e29e7652dbc01300c0eaf11ebf96190a^sys_id!=51a49f93db441300c0eaf11ebf961962^version&lt;3">
         <published>false</published>
     </wf_versionable>
     <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=e29e7652dbc01300c0eaf11ebf96190a">
-        <new_activity_definition>afa84396dbc01300c0eaf11ebf961905</new_activity_definition>
+        <new_activity_definition>59a49f93db441300c0eaf11ebf961961</new_activity_definition>
         <out_of_date>true</out_of_date>
         <notes>There is a newer version of this activity.
 

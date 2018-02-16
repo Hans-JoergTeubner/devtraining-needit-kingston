@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="Powershell">59155499eb512100b2f88a7af106feae</base_provider>
+        <category/>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_powershell.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"mail","type":"STRING","mandatory":false}]}</input_meta>
+        <input_process_script><![CDATA[activityInput.mail = current.u_requested_for_email; ]]></input_process_script>
+        <input_transform>{"source":"127.0.0.1","script_type":"file","command":"","midScriptFile":"8823139edbc01300c0eaf11ebf961989","powershellVariables":"[{\"name\":\"CurrentEmail\",\"type\":\"plain\",\"value\":\"${activityInput.mail}\"},{\"name\":\"ScratchpadEmail\",\"type\":\"plain\",\"value\":\"${workflow.scratchpad.email}\"}]","use_mid_service_account":"false","credential_tag":"","midCapabilities":"427709a60a0006bc7d2904e99132532d"}</input_transform>
+        <local_variables/>
+        <name>Test-output</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"result","type":"DATA_OBJECT","properties":[{"name":"ScratchpadEmail","type":"STRING"},{"name":"CurrentEmail","type":"STRING"}]}]}</output_meta>
+        <output_process_script/>
+        <output_transform>[{"toLink":"activityOutput.result.ScratchpadEmail","description":"","to":"result.ScratchpadEmail","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.output","from":"${executionResult.output}","fromSource":"executionResult","type":"JSON","children":"[]","translation":"$.SNC_ScratchpadEmail"},{"toLink":"activityOutput.result.CurrentEmail","description":"","to":"result.CurrentEmail","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.output","from":"${executionResult.output}","fromSource":"executionResult","type":"JSON","children":"[]","translation":"$.SNC_CurrentEmail"}]</output_transform>
+        <processing_script/>
+        <sample_payloads>{"executionResult.hresult":{"payload":"null","type":"direct"},"executionResult.output":{"payload":"\n{\n\"ALLUSERSPROFILE\":  \"C:\\\\ProgramData\",\n\"APPDATA\":  \"C:\\\\Users\\\\HJ_admin\\\\AppData\\\\Roaming\",\n\"CommonProgramFiles\":  \"C:\\\\Program Files\\\\Common Files\",\n\"CommonProgramFiles(x86)\":  \"C:\\\\Program Files (x86)\\\\Common Files\",\n\"CommonProgramW6432\":  \"C:\\\\Program Files\\\\Common Files\",\n\"COMPUTERNAME\":  \"EC2AMAZ-1O9GHDP\",\n\"ComSpec\":  \"C:\\\\Windows\\\\system32\\\\cmd.exe\",\n\"HOMEDRIVE\":  \"C:\",\n\"HOMEPATH\":  \"\\\\Users\\\\HJ_admin\",\n\"LANG\":  \"en_US.UTF-8\",\n\"LOCALAPPDATA\":  \"C:\\\\Users\\\\HJ_admin\\\\AppData\\\\Local\",\n\"LOGONSERVER\":  \"\\\\\\\\EC2AMAZ-1O9GHDP\",\n\"NUMBER_OF_PROCESSORS\":  \"1\",\n\"OS\":  \"Windows_NT\",\n\"Path\":  \"C:\\\\Windows\\\\system32;C:\\\\Windows;C:\\\\Windows\\\\System32\\\\Wbem;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\;C:\\\\Program Files\\\\Amazon\\\\cfn-bootstrap\\\\;C:\\\\Users\\\\HJ_admin\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps\",\n\"PATHEXT\":  \".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL\",\n\"PROCESSOR_ARCHITECTURE\":  \"AMD64\",\n\"PROCESSOR_IDENTIFIER\":  \"Intel64 Family 6 Model 63 Stepping 2, GenuineIntel\",\n\"PROCESSOR_LEVEL\":  \"6\",\n\"PROCESSOR_REVISION\":  \"3f02\",\n\"ProgramData\":  \"C:\\\\ProgramData\",\n\"ProgramFiles\":  \"C:\\\\Program Files\",\n\"ProgramFiles(x86)\":  \"C:\\\\Program Files (x86)\",\n\"ProgramW6432\":  \"C:\\\\Program Files\",\n\"PROMPT\":  \"$P$G\",\n\"PSExecutionPolicyPreference\":  \"Unrestricted\",\n\"PSModulePath\":  \"C:\\\\Users\\\\HJ_admin\\\\Documents\\\\WindowsPowerShell\\\\Modules;C:\\\\Program Files\\\\WindowsPowerShell\\\\Modules;C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\Modules;C:\\\\Program Files (x86)\\\\AWS Tools\\\\PowerShell\\\\\",\n\"PUBLIC\":  \"C:\\\\Users\\\\Public\",\n\"SNC_CurrentEmail\":  \"xxx\",\n\"SNC_JVM_ARCH\":  \"x86-64\",\n\"SNC_ScratchpadEmail\":  \"xxx\",\n\"SNCEncryptedVars\":  \"SNCPass\",\n\"SystemDrive\":  \"C:\",\n\"SystemRoot\":  \"C:\\\\Windows\",\n\"TEMP\":  \"C:\\\\Users\\\\HJ_admin\\\\AppData\\\\Local\\\\Temp\",\n\"TMP\":  \"C:\\\\Users\\\\HJ_admin\\\\AppData\\\\Local\\\\Temp\",\n\"USERDOMAIN\":  \"EC2AMAZ-1O9GHDP\",\n\"USERDOMAIN_ROAMINGPROFILE\":  \"EC2AMAZ-1O9GHDP\",\n\"USERNAME\":  \"HJ_admin\",\n\"USERPROFILE\":  \"C:\\\\Users\\\\HJ_admin\",\n\"windir\":  \"C:\\\\Windows\",\n\"WRAPPER_ARCH\":  \"x86\",\n\"WRAPPER_BIN_DIR\":  \"C:\\\\snow\\\\agent\\\\bin\",\n\"WRAPPER_BITS\":  \"64\",\n\"WRAPPER_CONF_DIR\":  \"C:\\\\snow\\\\agent\\\\conf\",\n\"WRAPPER_FILE_SEPARATOR\":  \"\\\\\",\n\"WRAPPER_HOST_NAME\":  \"EC2AMAZ-1O9GHDP\",\n\"WRAPPER_HOSTNAME\":  \"EC2AMAZ-1O9GHDP\",\n\"WRAPPER_INIT_DIR\":  \"C:\\\\Windows\\\\system32\",\n\"WRAPPER_LANG\":  \"en\",\n\"WRAPPER_OS\":  \"windows\",\n\"WRAPPER_PATH_SEPARATOR\":  \";\",\n\"WRAPPER_PID\":  \"4508\",\n\"WRAPPER_WORKING_DIR\":  \"C:\\\\snow\\\\agent\\\\\"\n}\n","type":"json"},"executionResult.errorMessages":{"payload":"null","type":"direct"},"executionResult.debugMessages":{"payload":"null","type":"direct"},"executionResult.credentialDebugInfo":{"payload":"2018-02-08 17:38:26 Tried Credential: name=AWSAccessCredentials, affinity: yes, status=success, sysid=d51030b6db441300c0eaf11ebf96191f, username=Workgroup\\hj_admin, type=Windows, order=100\r\n","type":"direct"},"executionResult.eccSysId":{"payload":"003a53d7db441300c0eaf11ebf961989","type":"direct"},"executionResult.tags":{"payload":"{\"__text__\":\"\\n{\\n\\\"ALLUSERSPROFILE\\\":  \\\"C:\\\\\\\\ProgramData\\\",\\n\\\"APPDATA\\\":  \\\"C:\\\\\\\\Users\\\\\\\\HJ_admin\\\\\\\\AppData\\\\\\\\Roaming\\\",\\n\\\"CommonProgramFiles\\\":  \\\"C:\\\\\\\\Program Files\\\\\\\\Common Files\\\",\\n\\\"CommonProgramFiles(x86)\\\":  \\\"C:\\\\\\\\Program Files (x86)\\\\\\\\Common Files\\\",\\n\\\"CommonProgramW6432\\\":  \\\"C:\\\\\\\\Program Files\\\\\\\\Common Files\\\",\\n\\\"COMPUTERNAME\\\":  \\\"EC2AMAZ-1O9GHDP\\\",\\n\\\"ComSpec\\\":  \\\"C:\\\\\\\\Windows\\\\\\\\system32\\\\\\\\cmd.exe\\\",\\n\\\"HOMEDRIVE\\\":  \\\"C:\\\",\\n\\\"HOMEPATH\\\":  \\\"\\\\\\\\Users\\\\\\\\HJ_admin\\\",\\n\\\"LANG\\\":  \\\"en_US.UTF-8\\\",\\n\\\"LOCALAPPDATA\\\":  \\\"C:\\\\\\\\Users\\\\\\\\HJ_admin\\\\\\\\AppData\\\\\\\\Local\\\",\\n\\\"LOGONSERVER\\\":  \\\"\\\\\\\\\\\\\\\\EC2AMAZ-1O9GHDP\\\",\\n\\\"NUMBER_OF_PROCESSORS\\\":  \\\"1\\\",\\n\\\"OS\\\":  \\\"Windows_NT\\\",\\n\\\"Path\\\":  \\\"C:\\\\\\\\Windows\\\\\\\\system32;C:\\\\\\\\Windows;C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\Wbem;C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\WindowsPowerShell\\\\\\\\v1.0\\\\\\\\;C:\\\\\\\\Program Files\\\\\\\\Amazon\\\\\\\\cfn-bootstrap\\\\\\\\;C:\\\\\\\\Users\\\\\\\\HJ_admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Microsoft\\\\\\\\WindowsApps\\\",\\n\\\"PATHEXT\\\":  \\\".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL\\\",\\n\\\"PROCESSOR_ARCHITECTURE\\\":  \\\"AMD64\\\",\\n\\\"PROCESSOR_IDENTIFIER\\\":  \\\"Intel64 Family 6 Model 63 Stepping 2, GenuineIntel\\\",\\n\\\"PROCESSOR_LEVEL\\\":  \\\"6\\\",\\n\\\"PROCESSOR_REVISION\\\":  \\\"3f02\\\",\\n\\\"ProgramData\\\":  \\\"C:\\\\\\\\ProgramData\\\",\\n\\\"ProgramFiles\\\":  \\\"C:\\\\\\\\Program Files\\\",\\n\\\"ProgramFiles(x86)\\\":  \\\"C:\\\\\\\\Program Files (x86)\\\",\\n\\\"ProgramW6432\\\":  \\\"C:\\\\\\\\Program Files\\\",\\n\\\"PROMPT\\\":  \\\"$P$G\\\",\\n\\\"PSExecutionPolicyPreference\\\":  \\\"Unrestricted\\\",\\n\\\"PSModulePath\\\":  \\\"C:\\\\\\\\Users\\\\\\\\HJ_admin\\\\\\\\Documents\\\\\\\\WindowsPowerShell\\\\\\\\Modules;C:\\\\\\\\Program Files\\\\\\\\WindowsPowerShell\\\\\\\\Modules;C:\\\\\\\\Windows\\\\\\\\system32\\\\\\\\WindowsPowerShell\\\\\\\\v1.0\\\\\\\\Modules;C:\\\\\\\\Program Files (x86)\\\\\\\\AWS Tools\\\\\\\\PowerShell\\\\\\\\\\\",\\n\\\"PUBLIC\\\":  \\\"C:\\\\\\\\Users\\\\\\\\Public\\\",\\n\\\"SNC_CurrentEmail\\\":  \\\"xxx\\\",\\n\\\"SNC_JVM_ARCH\\\":  \\\"x86-64\\\",\\n\\\"SNC_ScratchpadEmail\\\":  \\\"xxx\\\",\\n\\\"SNCEncryptedVars\\\":  \\\"SNCPass\\\",\\n\\\"SystemDrive\\\":  \\\"C:\\\",\\n\\\"SystemRoot\\\":  \\\"C:\\\\\\\\Windows\\\",\\n\\\"TEMP\\\":  \\\"C:\\\\\\\\Users\\\\\\\\HJ_admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\",\\n\\\"TMP\\\":  \\\"C:\\\\\\\\Users\\\\\\\\HJ_admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\",\\n\\\"USERDOMAIN\\\":  \\\"EC2AMAZ-1O9GHDP\\\",\\n\\\"USERDOMAIN_ROAMINGPROFILE\\\":  \\\"EC2AMAZ-1O9GHDP\\\",\\n\\\"USERNAME\\\":  \\\"HJ_admin\\\",\\n\\\"USERPROFILE\\\":  \\\"C:\\\\\\\\Users\\\\\\\\HJ_admin\\\",\\n\\\"windir\\\":  \\\"C:\\\\\\\\Windows\\\",\\n\\\"WRAPPER_ARCH\\\":  \\\"x86\\\",\\n\\\"WRAPPER_BIN_DIR\\\":  \\\"C:\\\\\\\\snow\\\\\\\\agent\\\\\\\\bin\\\",\\n\\\"WRAPPER_BITS\\\":  \\\"64\\\",\\n\\\"WRAPPER_CONF_DIR\\\":  \\\"C:\\\\\\\\snow\\\\\\\\agent\\\\\\\\conf\\\",\\n\\\"WRAPPER_FILE_SEPARATOR\\\":  \\\"\\\\\\\\\\\",\\n\\\"WRAPPER_HOST_NAME\\\":  \\\"EC2AMAZ-1O9GHDP\\\",\\n\\\"WRAPPER_HOSTNAME\\\":  \\\"EC2AMAZ-1O9GHDP\\\",\\n\\\"WRAPPER_INIT_DIR\\\":  \\\"C:\\\\\\\\Windows\\\\\\\\system32\\\",\\n\\\"WRAPPER_LANG\\\":  \\\"en\\\",\\n\\\"WRAPPER_OS\\\":  \\\"windows\\\",\\n\\\"WRAPPER_PATH_SEPARATOR\\\":  \\\";\\\",\\n\\\"WRAPPER_PID\\\":  \\\"4508\\\",\\n\\\"WRAPPER_WORKING_DIR\\\":  \\\"C:\\\\\\\\snow\\\\\\\\agent\\\\\\\\\\\"\\n}\\n\"}","type":"direct"}}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-08 16:49:01</sys_created_on>
+        <sys_id>e19c57d7db441300c0eaf11ebf9619f4</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Test-output</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>wf_element_activity_e19c57d7db441300c0eaf11ebf9619f4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-12 06:43:16</sys_updated_on>
+        <version_container_id>279a4e8fdb801300c0eaf11ebf961989</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=e19c57d7db441300c0eaf11ebf9619f4"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>false</published>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-08 16:49:01</sys_created_on>
+        <sys_id>e99c5b1bdb441300c0eaf11ebf9619d3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-12 06:43:16</sys_updated_on>
+        <valid_from>2018-02-09 13:51:59</valid_from>
+        <valid_to/>
+        <version>2</version>
+        <version_container_id>279a4e8fdb801300c0eaf11ebf961989</version_container_id>
+        <wf_element_definition display_value="Test-output">e19c57d7db441300c0eaf11ebf9619f4</wf_element_definition>
+    </wf_versionable>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Test-output">e19c57d7db441300c0eaf11ebf9619f4</activity_definition>
+        <condition>true</condition>
+        <derived_definition>3c1a5d97db001300c0eaf11ebf9619f7</derived_definition>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Always</name>
+        <order/>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-08 16:49:01</sys_created_on>
+        <sys_id>619c5b1bdb441300c0eaf11ebf9619d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-08 16:49:01</sys_updated_on>
+    </wf_condition_default>
+    <wf_versionable action="update_multiple" query="version_container_id=279a4e8fdb801300c0eaf11ebf961989^sys_id!=e99c5b1bdb441300c0eaf11ebf9619d3^version&lt;2">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=279a4e8fdb801300c0eaf11ebf961989">
+        <new_activity_definition>e19c57d7db441300c0eaf11ebf9619f4</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity.
+
+To update the activity, check out the workflow, select the activity, right click
+and select 'Update activity' to use the latest version, then publish the workflow</notes>
+    </wf_activity>
+</record_update>
